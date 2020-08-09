@@ -14,8 +14,17 @@ x=np.linspace(0,1,100)
 
 sol = integrate.odeint(f,y0,x)
 #print(sol)
+# grafica solucion numerica
 fig, axes = plt.subplots()
+plt.title("Solucion Numerica")
+plt.xlabel("Coordenada X")
+plt.ylabel("Coordenada Y")
 axes.plot(x,sol,'--')
+
+# grafica solucion exacta
 fig, axes = plt.subplots()
+plt.title("Solucion Exacta")
+plt.xlabel("Coordenada X")
+plt.ylabel("Coordenada Y")
 axes.plot(x,exacta(x))
 plt.show()
