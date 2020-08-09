@@ -17,7 +17,7 @@ class calculator:
         values=["7","8","9","/","%","clear","AC",
                 "4","5","6","*","(",")","**",
                 "1","2","3","-","=",",","0",".","x","+","sin()","asin","cos()","acos","tan()",
-                "pow","log10","y","abs","floor","pi","e","log","ceil","degrees","radians"]
+                "sqrt","log10","y","abs","floor","pi","e","log","ceil","degrees","radians"]
         text=1
         i=0
         row=1
