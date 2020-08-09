@@ -1,17 +1,30 @@
 import math
+from sympy import *
+from sympy.parsing.sympy_parser import parse_expr
+
+x, y = symbols('x y')
 
 
-y_ini = 1
-x_ini = 1
+#dy/dx = y**2/x**3
+exp1 = input("Ingrese la ecuacion que quiere resolver: ")
+paso = float(input("Ingrese el tamaño de paso: "))
+x0 = float(input("Ingrese el valor inicial de x: "))
+y0 = float(input("Ingrese el valor inicial de y: "))
 
-y = y_ini
-x = x_ini
+exp = parse_expr(exp1)
+
 count = 0
-#dy/dx = y^2/x^3
+
+
+
 while count <6:
-    y += (0.5)*(y**2)/(x**3)
-    x += 0.5;
+    res_exp = exp.subs([(x, x0), (y, y0)])
+
+    y0 += (paso)*res_exp 
+    x0 += paso 
     count = count + 1;
     print("%s. " %count)
-    print("y = %s" %y)
-    print("x = %s" %x)
+    print("y = %s" %y0)
+    print("x = %s" %x0)
+
+
