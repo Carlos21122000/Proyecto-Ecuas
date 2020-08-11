@@ -6,6 +6,7 @@ from scipy import integrate
 
 def f(y,x):
     return (x**2)*(1+y)
+
 def exacta(x):
     return 4*(np.exp(x**3/3))-1
     
